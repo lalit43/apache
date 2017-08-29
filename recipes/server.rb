@@ -9,7 +9,10 @@ package 'httpd' do
 end
 
 file '/var/www/html/index.html' do
-  content '<h1>Hello, World!</h>'
+  content "<h1>Hello, World!</h>'
+  <h2>IPADDRESS: #{node['ipaddress']}</h2>
+  <h2>HOSTNAME: #{node['hostname']}</h2>
+"
 end
 
 service 'httpd' do
